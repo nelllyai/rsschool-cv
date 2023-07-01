@@ -1,6 +1,5 @@
 # Nelly Nikitina
 **Junior Frontend Developer**
-***
 
 ## About Myself
 
