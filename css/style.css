@@ -23,21 +23,46 @@ body {
 
 .header,
 .footer {
-  padding: 20px 60px;
-  background-color: dimgray;
+  padding: 20px 0;
+  background-color: cadetblue;
   color: white;
 }
 
 .header {
-  position: sticky;
-  top: 80px;
-  margin-bottom: 100px;
-  margin-top: 40px;
+  margin-bottom: 60px;
+  margin-top: 80px;
 }
 
 .header-container {
   position: relative;
-  padding-left: 220px;
+  /* padding-left: 220px; */
+}
+
+.main-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.anchor {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  transition: background-color .2s, color .125s;
+}
+
+.anchor:hover {
+  background-color: lightcyan;
+  color: cadetblue;
 }
 
 .avatar {
@@ -58,24 +83,92 @@ body {
   border-color: tomato;
 }
 
-.main-title {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 36px;
+.section {
+  padding: 20px 0;
 }
 
 .subtitle {
   padding-bottom: 5px;
+  margin-bottom: 10px;
   border-bottom: 1px solid gray;
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
 }
 
-.footer {
-  padding-bottom: 80px;
+.subsubtitle {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 24px;
 }
 
-.section {
-  padding: 30px 0;
+.text {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: darkslategray;
+}
+
+.skills-list {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  color: cadetblue;
+  gap: 10px;
+  cursor: default;
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.pre {
+  padding: 16px;
+  background-color: cadetblue;
+  border-radius: 10px;
+}
+
+.code {
+  font-family: Consolas, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: lightcyan;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.github-logo,
+.rs-logo {
+  object-fit: contain;
+}
+
+.github-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.rs-logo {
+  width: 200px;
+  height: 100px;
 }
