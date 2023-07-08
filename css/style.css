@@ -23,8 +23,33 @@ body {
 }
 
 .header {
-  padding-left: 200px;
-  margin-top: 80px;
+  position: sticky;
+  top: 80px;
+  padding-left: 220px;
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
+
+.header .container {
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  left: -160px;
+  top: calc(50% - 200px / 2);
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 10px double darksalmon;
+  object-fit: cover;
+  object-position: bottom;
+  transition: border-color .125s;
+}
+
+.avatar:hover {
+  border-color: tomato;
 }
 
 .footer {
@@ -37,8 +62,17 @@ body {
   line-height: 36px;
 }
 
+.subtitle {
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+}
+
 .container {
-  max-width: 1440px;
+  max-width: 1500px;
+  padding: 0 60px;
   margin: 0 auto;
 }
 
