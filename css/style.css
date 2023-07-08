@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: khaki;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.header,
+.footer {
+  padding: 20px 60px;
+  background-color: dimgray;
+  color: white;
+}
+
+.header {
+  padding-left: 200px;
+  margin-top: 80px;
+}
+
+.footer {
+  padding-bottom: 80px;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 30px 0;
+}
