@@ -15,6 +15,12 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+.container {
+  max-width: 1500px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
 .header,
 .footer {
   padding: 20px 60px;
@@ -25,18 +31,18 @@ body {
 .header {
   position: sticky;
   top: 80px;
-  padding-left: 220px;
   margin-bottom: 100px;
   margin-top: 40px;
 }
 
-.header .container {
+.header-container {
   position: relative;
+  padding-left: 220px;
 }
 
 .avatar {
   position: absolute;
-  left: -160px;
+  left: 0;
   top: calc(50% - 200px / 2);
   margin: 0 auto;
   width: 200px;
@@ -50,10 +56,6 @@ body {
 
 .avatar:hover {
   border-color: tomato;
-}
-
-.footer {
-  padding-bottom: 80px;
 }
 
 .main-title {
@@ -70,10 +72,8 @@ body {
   line-height: 28px;
 }
 
-.container {
-  max-width: 1500px;
-  padding: 0 60px;
-  margin: 0 auto;
+.footer {
+  padding-bottom: 80px;
 }
 
 .section {
