@@ -1,0 +1,412 @@
+:root {
+  --text-color: #2c3a3a;
+  --bg-color: rgb(87, 144, 146);
+  --light-blue: rgb(219, 253, 253);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  max-width: 1456px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+.header,
+.footer {
+  padding: 20px 0;
+  background-color: khaki;
+  color: white;
+}
+
+.header {
+  padding-bottom: 0;
+  margin-bottom: 60px;
+  margin-top: 80px;
+}
+
+.header-container {
+  position: relative;
+  padding-left: 288px;
+}
+
+.main-title {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--bg-color);
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+}
+
+.anchor {
+  position: relative;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--bg-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.anchor:hover {
+  color: var(--text-color);
+}
+
+.avatar {
+  position: absolute;
+  left: 59px;
+  top: calc(50% - 200px / 2 - 10px);
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 15px solid khaki;
+  object-fit: cover;
+  object-position: bottom;
+  transition: transform 1s;
+}
+
+.avatar:hover {
+  transform: rotate(360deg);
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.subtitle {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--light-blue);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: khaki;
+}
+
+.subsubtitle {
+  margin-left: 20px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 24px;
+  color: khaki;
+}
+
+.text {
+  margin-bottom: 10px;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--light-blue);
+}
+
+.text:last-child {
+  margin-bottom: 0;
+}
+
+.big-margin {
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  padding: 0 20px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  color: cadetblue;
+  gap: 10px;
+  cursor: default;
+}
+
+.skill::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.skill-html::before {
+  background-image: url("../assets/icons/html.png");
+}
+
+.skill-css::before {
+  background-image: url("../assets/icons/css.png");
+}
+
+.skill-js::before {
+  background-image: url("../assets/icons/js.png");
+}
+
+.skill-ajax::before {
+  background-image: url("../assets/icons/ajax.png");
+}
+
+.skill-jquery::before {
+  background-image: url("../assets/icons/jquery.svg");
+}
+
+.skill-eslint::before {
+  background-image: url("../assets/icons/eslint.png");
+}
+
+.skill-gulp::before {
+  background-image: url("../assets/icons/gulp.png");
+}
+
+.skill-webpack::before {
+  background-image: url("../assets/icons/webpack.png");
+}
+
+.skill-bootstrap::before {
+  background-image: url("../assets/icons/bootstrap.png");
+}
+
+.skill-git::before {
+  background-image: url("../assets/icons/git.png");
+}
+
+.skill-npm::before {
+  background-image: url("../assets/icons/npm.png");
+}
+
+.skill-vue::before {
+  background-image: url("../assets/icons/vue.png");
+}
+
+.skill-react::before {
+  background-image: url("../assets/icons/react.png");
+}
+
+.skill-redux::before {
+  background-image: url("../assets/icons/redux.svg");
+}
+
+.pre {
+  margin: 0 20px;
+  padding: 16px;
+  background-color: var(--text-color);
+  border-radius: 10px;
+  overflow-x: scroll;
+}
+
+.code {
+  font-family: Inconsolata, monospace;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--light-blue);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  gap: 10px;
+}
+
+.card {
+  flex-grow: 1;
+  padding: 8px;
+  width: 400px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-link {
+  display: block;
+  color: cadetblue;
+  text-decoration: none;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+}
+
+.contacts-list {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--light-blue);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.contact-link:hover {
+  color: khaki;
+}
+
+.svg-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github-logo,
+.rs-logo {
+  object-fit: contain;
+  transition: transform .4s;
+}
+
+.github-logo:hover,
+.rs-logo:hover {
+  transform: scale(1.1);
+}
+
+.github-logo {
+  margin-left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.rs-logo {
+  margin-right: 20px;
+  width: 160px;
+  height: 80px;
+}
+
+.deploy-date {
+  font-size: 20px;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+@media (max-width: 970px) {
+  .card {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .header {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .header-container {
+    padding-left: 30px;
+  }
+
+  .main-title {
+    text-align: center;
+  }
+
+  .navigation-list {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .avatar {
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .subsubtitle {
+    margin-left: 10px;
+  }
+
+  .text {
+    padding: 10px;
+  }
+
+  .contacts-list {
+    flex-direction: column;
+    margin: 0 10px;
+    gap: 10px;
+  }
+
+  .github-logo {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .rs-logo {
+    margin-right: 10px;
+    width: 80px;
+    height: 40px;
+  }
+
+  .deploy-date {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
