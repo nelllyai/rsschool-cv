@@ -219,12 +219,6 @@ body {
   background-image: url("../assets/icons/redux.svg");
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-}
-
 .pre {
   margin: 0 20px;
   padding: 16px;
@@ -280,7 +274,7 @@ body {
 }
 
 .contacts-list {
-  margin-left: 20px;
+  margin: 0 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -356,6 +350,12 @@ body {
     padding: 0 30px;
   }
 
+  .header {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
   .header-container {
     padding-left: 30px;
   }
@@ -385,6 +385,7 @@ body {
 
   .contacts-list {
     flex-direction: column;
+    margin: 0 10px;
     gap: 10px;
   }
 
