@@ -157,6 +157,7 @@ body {
   content: "";
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -233,7 +234,7 @@ body {
 }
 
 .code {
-  font-family: Consolas, sans-serif;
+  font-family: Inconsolata, monospace;
   font-size: 16px;
   line-height: 20px;
   color: var(--light-blue);
@@ -278,6 +279,33 @@ body {
   border: 1px solid var(--text-color);
 }
 
+.contacts-list {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--light-blue);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.contact-link:hover {
+  color: khaki;
+}
+
+.svg-icon {
+  width: 25px;
+  height: 25px;
+}
+
 .footer-container {
   display: flex;
   align-items: center;
@@ -313,7 +341,7 @@ body {
   color: var(--text-color);
 }
 
-@media (max-width: 1354px) {
+@media (max-width: 1356px) {
   .header-container {
     padding-right: 60px;
   }
@@ -323,7 +351,7 @@ body {
   }
 }
 
-@media (max-width: 636px) {
+@media (max-width: 650px) {
   .container {
     padding: 0 30px;
   }
@@ -353,6 +381,11 @@ body {
 
   .text {
     padding: 10px;
+  }
+
+  .contacts-list {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .github-logo {
