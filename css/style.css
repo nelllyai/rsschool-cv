@@ -11,12 +11,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-color: khaki;
+  /* background-color: khaki; */
+  background-color: rgb(87, 144, 146);
   font-family: "Nunito Sans", sans-serif;
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1456px;
   padding: 0 60px;
   margin: 0 auto;
 }
@@ -24,63 +25,67 @@ body {
 .header,
 .footer {
   padding: 20px 0;
-  background-color: cadetblue;
+  background-color: khaki;
   color: white;
 }
 
 .header {
+  padding-bottom: 0;
   margin-bottom: 60px;
   margin-top: 80px;
 }
 
 .header-container {
   position: relative;
-  /* padding-left: 220px; */
+  padding-left: 288px;
+  padding-right: 288px;
 }
 
 .main-title {
+  margin-left: 10px;
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 1;
+  color: rgb(87, 144, 146);
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  justify-content: space-between;
 }
 
 .anchor {
+  position: relative;
   display: block;
   padding: 10px;
   border-radius: 10px;
-  color: black;
+  color: rgb(87, 144, 146);
   text-decoration: none;
-  transition: background-color .2s, color .125s;
+  transition: color 0.3s;
 }
 
 .anchor:hover {
-  background-color: lightcyan;
-  color: cadetblue;
+  color: black;
 }
 
 .avatar {
   position: absolute;
-  left: 0;
-  top: calc(50% - 200px / 2);
+  left: 59px;
+  top: calc(50% - 200px / 2 - 10px);
   margin: 0 auto;
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  border: 10px double darksalmon;
+  border: 15px solid khaki;
   object-fit: cover;
   object-position: bottom;
-  transition: border-color .125s;
+  transition: transform 1s;
 }
 
 .avatar:hover {
-  border-color: tomato;
+  transform: rotate(360deg);
 }
 
 .section {
@@ -89,30 +94,39 @@ body {
 
 .subtitle {
   padding-bottom: 5px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgb(219, 253, 253);
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
+  color: khaki;
 }
 
 .subsubtitle {
+  margin-left: 20px;
   margin-bottom: 8px;
   font-size: 20px;
   line-height: 24px;
+  color: khaki;
 }
 
 .text {
   margin-bottom: 10px;
+  padding: 0 20px;
   font-size: 18px;
   line-height: 22px;
-  color: darkslategray;
+  color: rgb(219, 253, 253);
+}
+
+.big-margin {
+  margin-bottom: 20px;
 }
 
 .skills-list {
+  padding: 0 20px;
   display: flex;
   margin-bottom: 10px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -137,20 +151,58 @@ body {
 }
 
 .pre {
+  margin: 0 20px;
   padding: 16px;
-  background-color: cadetblue;
+  background-color: #2c3a3a;
   border-radius: 10px;
+  overflow-x: scroll;
 }
 
 .code {
   font-family: Consolas, sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: lightcyan;
+  color: rgb(219, 253, 253);
 }
 
 .bold {
   font-weight: 600;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.card {
+  padding: 8px;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.card-img {
+  display: block;
+  /* margin: 8px; */
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .footer-container {
@@ -161,14 +213,28 @@ body {
 .github-logo,
 .rs-logo {
   object-fit: contain;
+  transition: transform .4s;
+}
+
+.github-logo:hover,
+.rs-logo:hover {
+  transform: scale(1.1);
 }
 
 .github-logo {
-  width: 100px;
-  height: 100px;
+  margin-left: 20px;
+  width: 80px;
+  height: 80px;
 }
 
 .rs-logo {
-  width: 200px;
-  height: 100px;
+  margin-right: 20px;
+  width: 160px;
+  height: 80px;
+}
+
+@media (max-width: 1454px) {
+  .skills-list {
+    justify-content: space-evenly;
+  }
 }
