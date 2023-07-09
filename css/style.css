@@ -43,7 +43,6 @@ body {
 .header-container {
   position: relative;
   padding-left: 288px;
-  padding-right: 288px;
 }
 
 .main-title {
@@ -58,7 +57,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  column-gap: 8px;
 }
 
 .anchor {
@@ -240,11 +239,14 @@ body {
 
 .projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 0 20px;
+  gap: 10px;
 }
 
 .card {
+  flex-grow: 1;
   padding: 8px;
   width: 400px;
   background-color: lightcyan;
@@ -256,21 +258,27 @@ body {
   transform: scale(1.03);
 }
 
+.card-link {
+  display: block;
+  color: cadetblue;
+  text-decoration: none;
+}
+
 .card-title {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 22px;
   text-align: center;
 }
 
 .card-img {
   display: block;
   width: 100%;
-  height: 120px;
+  height: 220px;
   object-fit: cover;
   border-radius: 5px;
-  border: 1px solid var(--text-color);
+  border: 2px solid var(--bg-color);
 }
 
 .contacts-list {
@@ -335,13 +343,9 @@ body {
   color: var(--text-color);
 }
 
-@media (max-width: 1356px) {
-  .header-container {
-    padding-right: 60px;
-  }
-
-  .navigation-list {
-    justify-content: flex-start;
+@media (max-width: 970px) {
+  .card {
+    flex-basis: 100%;
   }
 }
 
