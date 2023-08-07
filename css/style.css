@@ -223,7 +223,7 @@ body {
   padding: 16px;
   background-color: var(--text-color);
   border-radius: 10px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .code {
@@ -251,7 +251,7 @@ body {
   width: 400px;
   background-color: lightcyan;
   border-radius: 10px;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -296,7 +296,7 @@ body {
   line-height: 20px;
   color: var(--light-blue);
   text-decoration: none;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 
 .contact-link:hover {
@@ -317,7 +317,7 @@ body {
 .github-logo,
 .rs-logo {
   object-fit: contain;
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .github-logo:hover,
@@ -346,6 +346,14 @@ body {
 @media (max-width: 970px) {
   .card {
     flex-basis: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .contacts-list {
+    flex-direction: column;
+    margin: 0 10px;
+    gap: 10px;
   }
 }
 
@@ -387,18 +395,12 @@ body {
     padding: 10px;
   }
 
-  .contacts-list {
-    flex-direction: column;
-    margin: 0 10px;
-    gap: 10px;
-  }
-
   .github-logo {
     margin-left: 10px;
     width: 40px;
     height: 40px;
   }
-  
+
   .rs-logo {
     margin-right: 10px;
     width: 80px;
